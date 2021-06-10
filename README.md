@@ -12,6 +12,8 @@
 
 یک قالب Jekyll با سایدبار، طراحی ریسپانسیو که به ارايه نوشته تمرکز دارد. برای کمک به شما در ثبت و انتشار تجربه‌تان طراحی شده است. [پیش نمایش»](https://chirpy.cotes.info)
 
+برای قالب فارسی از فونت [وزیر](https://github.com/rastikerdar/vazir-font) استفاده شده است.
+
 [![Devices Mockup](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/devices-mockup.png)](https://chirpy.cotes.info)
 
 ## امکانات
