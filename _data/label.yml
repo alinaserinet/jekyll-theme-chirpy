@@ -1,19 +1,19 @@
 # The label text of site.
 
 panel:
-  lastmod: Recent Update
-  trending_tags: Trending Tags
-  toc: Contents
+  lastmod: به‌روزرسانی های اخیر
+  trending_tags: تگ‌های برتر
+  toc: محتوا
 
 post:
-  relate_posts: Further Reading
-  share: Share
+  relate_posts: مطالب بیشتر
+  share: اشتراک
   button:
-    next: Newer
-    previous: Older
+    next: جدیدتر
+    previous: قدیمی‌تر
 
-search_hint: Search   # text show on search bar
+search_hint: جستجو   # text show on search bar
 
-pin_prompt: Pinned    # pinned prompt
+pin_prompt: نشان شده    # pinned prompt
 
-read_time_unit: min   # see posts' time to read
+read_time_unit: دقیقه   # see posts' time to read

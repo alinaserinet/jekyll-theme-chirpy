@@ -4,7 +4,7 @@
 
 .pagination {
   color: var(--btn-patinator-text-color);
-  font-family: 'Lato', sans-serif;
+  font-family: 'Vazir', 'Lato', sans-serif;
 
   a:hover {
     text-decoration: none;
@@ -73,7 +73,7 @@
         font-size: 0.73rem;
       }
       span:not(:last-child) {
-        margin-right: 1.2rem;
+        margin-left: 1.2rem;
       }
     }
 
@@ -149,7 +149,7 @@
 
     .page-item {
       &:not(:last-child) {
-        margin-right: 0.7rem;
+        margin-left: 0.7rem;
       }
 
       .page-link {

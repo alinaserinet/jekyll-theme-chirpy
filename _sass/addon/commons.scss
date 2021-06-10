@@ -1,6 +1,7 @@
 /*
   The common styles
 */
+@import url('/assets/fonts/Vazir.css');
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;900&display=swap');
 
 @mixin mode-toggle($dark-mode: false) {
@@ -46,11 +47,13 @@ html[mode=dark] {
 }
 
 body {
+  direction: rtl;
+  text-align: right;
   line-height: 1.75rem;
   background: var(--body-bg);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
+  font-family: 'Vazir', 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
 }
 
 /* --- Typography --- */
@@ -110,8 +113,8 @@ img {
 }
 
 blockquote {
-  border-left: 5px solid var(--blockquote-border-color);
-  padding-left: 1rem;
+  border-right: 5px solid var(--blockquote-border-color);
+  padding-right: 1rem;
   color: var(--blockquote-text-color);
 }
 
@@ -152,6 +155,9 @@ footer {
     }
   }
   .footer-right {
+    text-align: left;
+  }
+  .footer-left {
     text-align: right;
   }
 }
@@ -183,7 +189,7 @@ footer {
     @include panel-label;
   }
   .post-content {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -357,7 +363,8 @@ footer {
 }
 
 .post-content {
-  font-size: 1.08rem;
+  text-align: justify;
+  font-size: 0.97rem;
   line-height: 1.8;
   margin-top: 2rem;
   overflow-wrap: break-word;
@@ -598,7 +605,7 @@ $sidebar-display: "sidebar-display";
 
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100%;
   overflow-y: auto;
   width: $sidebar-width-medium;
@@ -704,7 +711,7 @@ $sidebar-display: "sidebar-display";
   ul {
     height: $tab-height * $tab-count;
     margin-bottom: 2rem;
-    padding-left: 0;
+    padding-right: 0;
 
     li {
       width: 100%;
@@ -839,8 +846,8 @@ $sidebar-display: "sidebar-display";
   height: $topbar-height;
   position: fixed;
   top: 0;
-  left: 260px; /* same as sidebar width */
-  right: 0;
+  right: 260px; /* same as sidebar width */
+  left: 0;
   transition: top 0.2s ease-in-out;
   z-index: 50;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
@@ -856,7 +863,7 @@ $sidebar-display: "sidebar-display";
   #breadcrumb {
     font-size: 1rem;
     color: gray;
-    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
     a:hover {
       @extend %link-hover;
@@ -897,7 +904,7 @@ $sidebar-display: "sidebar-display";
 
 #search-cancel { /* 'Cancel' link */
   color: var(--link-color);
-  margin-left: 1rem;
+  margin-right: 1rem;
   display: none;
 }
 
@@ -981,7 +988,7 @@ $sidebar-display: "sidebar-display";
   display: none;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: sans-serif;
+  font-family: 'Vazir', sans-serif;
   color: var(--topbar-text-color);
   text-align: center;
   width: 70%;
@@ -1157,7 +1164,7 @@ $sidebar-display: "sidebar-display";
 
     #topbar-wrapper,
     #main-wrapper {
-      transform: translateX(#{$sidebar-width-medium});
+      transform: translateX(-#{$sidebar-width-medium});
     }
 
   }
@@ -1165,8 +1172,8 @@ $sidebar-display: "sidebar-display";
   #sidebar {
     @extend %slide;
 
-    transform: translateX(-#{$sidebar-width-medium}); // hide
-    -webkit-transform: translateX(-#{$sidebar-width-medium});
+    transform: translateX(#{$sidebar-width-medium}); // hide
+    -webkit-transform: translateX(#{$sidebar-width-medium});
 
     .cursor {
       -webkit-transition: none;
@@ -1193,7 +1200,7 @@ $sidebar-display: "sidebar-display";
   #topbar-wrapper {
     @extend %slide;
 
-    left: 0;
+    right: 0;
   }
 
   .topbar-up {
@@ -1264,7 +1271,7 @@ $sidebar-display: "sidebar-display";
   }
 
   #main-wrapper {
-    margin-left: $sidebar-width-medium;
+    margin-right: $sidebar-width-medium;
   }
 
   .profile-wrapper {
@@ -1295,7 +1302,7 @@ $sidebar-display: "sidebar-display";
   }
 
   #topbar-title {
-    text-align: left;
+    text-align: right;
   }
 
   footer > div.d-flex {
@@ -1337,7 +1344,7 @@ $sidebar-display: "sidebar-display";
   }
 
   #topbar-wrapper {
-    left: 210px;
+    right: 210px;
   }
 
   #search-results > div {
@@ -1356,7 +1363,7 @@ $sidebar-display: "sidebar-display";
   }
 
   #main-wrapper {
-    margin-left: 210px;
+    margin-right: 210px;
   }
 
   #breadcrumb {
@@ -1432,7 +1439,7 @@ $sidebar-display: "sidebar-display";
   }
 
   .post-content {
-    font-size: 1.03rem;
+    font-size: .95rem;
   }
 
   footer > div.d-felx {
@@ -1472,7 +1479,7 @@ $sidebar-display: "sidebar-display";
 @media all and (min-width: 1650px) {
 
   #breadcrumb {
-    padding-left: 0;
+    padding-right: 0;
   }
 
   #main > div.row > div.col-xl-8 {
@@ -1484,7 +1491,7 @@ $sidebar-display: "sidebar-display";
   }
 
   #main-wrapper {
-    margin-left: $sidebar-width-large;
+    margin-right: $sidebar-width-large;
   }
 
   #panel-wrapper {
@@ -1492,7 +1499,7 @@ $sidebar-display: "sidebar-display";
   }
 
   #topbar-wrapper {
-    left: $sidebar-width-large;
+    right: $sidebar-width-large;
   }
 
   #topbar {
@@ -1511,11 +1518,11 @@ $sidebar-display: "sidebar-display";
       margin-bottom: 1rem;
 
       &.text-center {
-        text-align: left !important;
+        text-align: right !important;
       }
 
       %profile-ml {
-        margin-left: 4.5rem;
+        margin-right: 4.5rem;
       }
 
       #avatar {
@@ -1525,7 +1532,7 @@ $sidebar-display: "sidebar-display";
           width: 6.2rem;
           height: 6.2rem;
           &.mx-auto {
-            margin-left: 0 !important;
+            margin-right: 0 !important;
           }
         }
       }
@@ -1549,7 +1556,7 @@ $sidebar-display: "sidebar-display";
     } // .profile-wrapper (min-width: 1650px)
 
     ul {
-      padding-left: 2.5rem;
+      padding-right: 2.5rem;
 
       > li:last-child {
         > a {
@@ -1558,7 +1565,7 @@ $sidebar-display: "sidebar-display";
       }
 
       .nav-item {
-        text-align: left;
+        text-align: right;
 
         .nav-link {
           > span {
@@ -1639,7 +1646,7 @@ $sidebar-display: "sidebar-display";
 @media all and (min-width: 1700px) {
   #topbar-wrapper {
     /* 100% - 350px - (1920px - 350px); */
-    padding-right: calc(100% - #{$sidebar-width-large} - (1920px - #{$sidebar-width-large}));
+    padding-left: calc(100% - #{$sidebar-width-large} - (1920px - #{$sidebar-width-large}));
   }
 
   #topbar {

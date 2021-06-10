@@ -104,6 +104,9 @@ code {
   -ms-hyphens: none;
   -moz-hyphens: none;
   hyphens: none;
+  float: left;
+  direction: ltr;
+  margin: 1rem;
 
   &.highlighter-rouge {
     font-size: $code-font-size;
